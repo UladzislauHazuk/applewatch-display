@@ -1,0 +1,42 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.wrapper #year, .wrapper #clock {
+  font-family: "K2D";
+  font-weight: 400;
+  color: #FFFFFF;
+}
+
+.wrapper {
+  position: relative;
+  width: 600px;
+  height: 700px;
+  background: #222222;
+  border: 10px solid #828282;
+  border-radius: 50px;
+}
+.wrapper .entry {
+  background-image: url(img/Mask\ group.svg);
+  background-repeat: no-repeat;
+  width: 472px;
+  height: 472px;
+  margin: 100px auto;
+}
+.wrapper #clock {
+  position: absolute;
+  top: 5%;
+  right: 7%;
+  font-size: 30px;
+}
+.wrapper #year {
+  position: absolute;
+  bottom: 5%;
+  left: 32%;
+  width: 230px;
+  text-align: center;
+  font-size: 20px;
+  border-bottom: #FFFFFF solid 10px;
+  padding-bottom: 12px;
+}
