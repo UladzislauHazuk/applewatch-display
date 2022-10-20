@@ -1,24 +1,30 @@
-function currentTime() {
-    const date = new Date();
-    let hour = date.getHours();
-    let min = date.getMinutes();
-    let year = date.getFullYear();
+class AppleWatch {
+    constructor() {
+        this.currentTime();
+    }
 
-    hour = updateTime(hour);
-    min = updateTime(min);
+    updateTime(k) {
+        if (k < 10) {   
+            return '0' + k;
+        } else {
+            return k;
+        }
+    }
 
-    document.getElementById('clock').innerText = `${hour}:${min}`;
-    document.getElementById('year').innerText = `since. ${year}`;
-}
+    currentTime() {
+        const date = new Date();
+        let hour = date.getHours();
+        let min = date.getMinutes();
+        let year = date.getFullYear();
 
-let t = setTimeout(currentTime, 1000);
+        hour = this.updateTime(hour);
+        min = this.updateTime(min);
+    
+        document.getElementById('clock').innerText = `${hour}:${min}`;
+        document.getElementById('year').innerText = `since. ${year}`;
 
-function updateTime(k) {
-    if (k < 10) {   
-        return '0' + k;
-    } else {
-        return k;
+        setTimeout(this.currentTime, 1000);
     }
 }
 
-currentTime();
+const appleWatch = new AppleWatch();
